@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Sorter</title>
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>CV Sorter</h1>
+
+    <label for="experience">Experience:</label>
+    <input type="range" id="experience" min="0" max="100" value="50">
+
+    <label for="education">Education:</label>
+    <input type="range" id="education" min="0" max="100" value="50">
+
+    <label for="skills">Skills:</label>
+    <input type="range" id="skills" min="0" max="100" value="50">
+
+    <label for="languages">Languages:</label>
+    <input type="range" id="languages" min="0" max="100" value="50">
+
+    <label for="communication">Communication:</label>
+    <input type="range" id="communication" min="0" max="100" value="50">
+
+    <button onclick="sortCV()">Sort CVs</button>
+
+    <div id="output"></div>
+
+    <script>
+        function sortCV() {
+            // Get values from sliders
+            const experienceValue = document.getElementById("experience").value;
+            const educationValue = document.getElementById("education").value;
+            const skillsValue = document.getElementById("skills").value;
+            const languagesValue = document.getElementById("languages").value;
+            const communicationValue = document.getElementById("communication").value;
+
+            // You can implement your sorting logic here based on the values
+
+            // Display the sorted result
+            const output = document.getElementById("output");
+            output.textContent = `CVs sorted based on criteria: Experience ${experienceValue}, Education ${educationValue}, Skills ${skillsValue}, Languages ${languagesValue}, Communication ${communicationValue}`;
+        }
+    </script>
+</body>
+</html>
